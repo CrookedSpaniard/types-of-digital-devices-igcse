@@ -58,9 +58,9 @@
 .ty-ipo { display: grid; gap: .7rem; justify-items: start; }
 .ty-flow { list-style: none; margin: 0; padding: 0; display: grid; gap: .45rem; width: 100%; }
 .ty-flow li { display: grid; grid-template-columns: 5.2rem 1fr; gap: .6rem; align-items: center; background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: .5rem .7rem; font-size: .9rem; transition: background .3s, border-color .3s; }
-.ty-flow li b { color: var(--muted); text-transform: uppercase; font-size: .76rem; letter-spacing: .05em; }
+.ty-flow li > b { color: var(--muted); text-transform: uppercase; font-size: .76rem; letter-spacing: .05em; }
 .ty-flow li.on { border-color: var(--scene); background: color-mix(in srgb, var(--scene) 12%, var(--surface)); }
-.ty-flow li.on b { color: var(--scene); }
+.ty-flow li.on > b { color: var(--scene); }
 .ty-hunt { display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: .5rem; }
 .ty-obj { border: 1px solid var(--line); background: var(--surface); border-radius: 12px; padding: .55rem; display: grid; justify-items: center; gap: .15rem; text-align: center; }
 .ty-obj span { font-size: 2rem; }

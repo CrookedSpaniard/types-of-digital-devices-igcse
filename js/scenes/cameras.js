@@ -107,7 +107,7 @@ FD.add({
     }
     raf = requestAnimationFrame(loop);
     function strip() {
-      const row = (y, n, lbl) => `<text class="svg-sm" x="4" y="${y - 3}" text-anchor="start">${lbl}</text><rect class="cm-film" x="0" y="${y}" width="520" height="20"/>${Array.from({ length: n }, (_, i) => `<rect class="cm-frame" x="${3 + i * (514 / n)}" y="${y + 4}" width="${Math.max(2, 514 / n - 4)}" height="12"/>`).join('')}`;
+      const row = (y, n, lbl) => `<text class="svg-sm" x="4" y="${y - 3}" style="text-anchor:start">${lbl}</text><rect class="cm-film" x="0" y="${y}" width="520" height="20"/>${Array.from({ length: n }, (_, i) => `<rect class="cm-frame" x="${3 + i * (514 / n)}" y="${y + 4}" width="${Math.max(2, 514 / n - 4)}" height="12"/>`).join('')}`;
       $('#strip').innerHTML = row(12, fpsA, `${fpsA} frames per second`) + row(46, 24, '24 frames per second · 1 second →');
     }
     function setFps(v) { fpsA = v; $('#fps').value = v; $('#fpsO').textContent = v + ' fps'; $('#fpsAL').textContent = v; strip(); }

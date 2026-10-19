@@ -184,9 +184,9 @@ FD.add({
     const on = new Set();
     function battery() {
       const use = DRAIN.reduce((n, [k, , w]) => n + (on.has(k) ? w : 0), 2);
-      const hours = Math.round(60 / use);
+      const hours = Math.max(1, Math.round(80 / use));
       $('#spBat').style.setProperty('--v', Math.max(6, Math.min(100, hours / 1.68)) + '%');
-      $('#spTxt').innerHTML = `About <b>${hours >= 24 ? Math.round(hours / 24) + ' day' + (hours >= 48 ? 's' : '') : hours + ' hours'}</b> between charges`;
+      $('#spTxt').innerHTML = `About <b>${hours >= 24 ? Math.round(hours / 24) + ' day' + (hours >= 48 ? 's' : '') : hours + (hours === 1 ? ' hour' : ' hours')}</b> between charges`;
       $('#batS').textContent = '🔋 ' + (on.size ? Math.max(5, 100 - on.size * 17) : 100) + '%';
       root.querySelectorAll('#drain button').forEach((b) => b.classList.toggle('on', on.has(b.dataset.v)));
     }

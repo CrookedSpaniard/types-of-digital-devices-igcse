@@ -90,7 +90,7 @@ FD.add({
                 <rect class="pc-board" x="20" y="40" width="200" height="80" rx="8"/>
                 ${Array.from({ length: 20 }, (_, i) => `<circle class="pc-pin" cx="${34 + i * 9}" cy="50" r="2.4"/><circle class="pc-pin" cx="${34 + i * 9}" cy="58" r="2.4"/>`).join('')}
                 <rect class="pc-soc" x="96" y="72" width="34" height="34" rx="3"/><text x="113" y="93" class="ty-chipt" text-anchor="middle">CPU</text>
-                <rect class="pc-sd" id="sd" x="-10" y="86" width="26" height="20" rx="2"/><text x="3" y="132" class="svg-sm">microSD</text>
+                <rect class="pc-sd" id="sd" x="6" y="86" width="26" height="20" rx="2"/><text x="26" y="134" class="svg-sm">microSD</text>
                 <rect class="pc-port" x="160" y="112" width="16" height="10" rx="2"/><rect class="pc-port" x="186" y="112" width="16" height="10" rx="2"/>
                 <path class="pc-wire" d="M52 50 C 52 10, 250 10, 250 60"/><path class="pc-wire b" d="M70 50 C 70 20, 270 40, 270 120"/>
                 <circle class="pc-led" id="led" cx="250" cy="72" r="12"/><text class="svg-sm" x="250" y="100">LED</text>
