@@ -110,7 +110,7 @@ FD.add({
       $('#wave').classList.remove('on'); $('#msg').classList.remove('on');
       $('#simGo').textContent = '💳 Insert the SIM card';
     }
-    const say = (t) => { $('#msgT').textContent = t; $('#msg').classList.add('on'); FD.pulse($('#msg')); };
+    const say = (t) => { $('#msgT').textContent = t; const w = Math.min(280, Math.max(200, $('#msgT').getComputedTextLength() + 28)), r = $('#msg rect'); r.setAttribute('width', w); r.setAttribute('x', 300 - w / 2); $('#msg').classList.add('on'); FD.pulse($('#msg')); };
     async function simInsert() {
       const id = ++simId, ok = () => id === simId && !dead;
       simIn = true; $('#simGo').textContent = '⏏ Remove the SIM card';

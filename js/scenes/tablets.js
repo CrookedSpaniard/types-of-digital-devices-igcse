@@ -40,7 +40,7 @@ FD.add({
 
         <div data-panel="trip" class="sim" hidden>
           <div class="sim-box">
-            <svg viewBox="0 0 520 220" aria-label="A walk from home to school passing in and out of Wi-Fi zones">
+            <svg viewBox="0 -16 520 244" aria-label="A walk from home to school passing in and out of Wi-Fi zones">
               ${ZONES.map(([x, y, r, n]) => `<circle class="tb-zone" cx="${x}" cy="${y}" r="${r}"/><text class="tb-zl" x="${x}" y="${y - r - 6}">${n}</text>`).join('')}
               <path class="tb-road" d="M${ROUTE.map((p) => p.join(' ')).join(' L')}"/>
               <text class="tb-zl" x="225" y="190">🌳 Park</text><text class="tb-zl" x="390" y="150">🚌 Bus</text>

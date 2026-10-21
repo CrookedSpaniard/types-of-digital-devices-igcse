@@ -69,10 +69,10 @@ FD.add({
           <div class="pc-two">
             <div class="sim-box pc-unit" id="uDesk"><svg viewBox="0 0 200 150" aria-label="Desktop computer">${'<g transform="translate(20 10) scale(2.2)">' + FD.dv.desktop(0, 0) + '</g>'}<text class="pc-off" x="86" y="58" text-anchor="middle">No power</text></svg><b>Desktop</b><span class="pill" id="dState">🔌 on mains</span></div>
             <div class="sim-box pc-unit" id="uLap"><svg viewBox="0 0 200 150" aria-label="Laptop computer"><g transform="translate(20 20) scale(2.6)" data-zone="lap">${FD.dv.laptop(0, 0)}</g>
-              <g class="pc-lbl" data-l="screen"><circle cx="100" cy="50" r="4"/><text x="100" y="40">screen</text></g>
+              <g class="pc-lbl" data-l="screen"><circle cx="100" cy="50" r="4"/><text x="100" y="14">screen</text></g>
               <g class="pc-lbl" data-l="keys"><circle cx="70" cy="110" r="4"/><text x="58" y="138">keyboard</text></g>
               <g class="pc-lbl" data-l="pad"><circle cx="100" cy="116" r="4"/><text x="118" y="138">track pad</text></g>
-              <g class="pc-lbl" data-l="bat"><circle cx="150" cy="114" r="4"/><text x="166" y="102">battery</text></g></svg>
+              <g class="pc-lbl" data-l="bat"><circle cx="150" cy="114" r="4"/><text x="176" y="138">battery</text></g></svg>
               <b>Laptop</b><span class="pill" id="lState">🔌 on mains</span></div>
           </div>
           <div class="ctrls"><button class="btn primary small-btn" id="unplug">🔌 Unplug and carry them to the library</button><div class="meter" style="flex:1;min-width:12rem"><span class="meter-l">Laptop battery</span><span class="bar"><i id="bat" style="--v:100%"></i></span></div></div>

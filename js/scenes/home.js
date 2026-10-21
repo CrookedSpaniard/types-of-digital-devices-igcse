@@ -65,7 +65,7 @@ FD.add({
               <rect class="hm-tvspk" x="30" y="128" width="20" height="4"/><rect class="hm-tvspk" x="96" y="128" width="20" height="4"/>
               <g id="ext" class="hm-ext"><rect class="dv-body" x="150" y="80" width="34" height="80" rx="5"/><circle class="hm-cone" cx="167" cy="105" r="10"/><circle class="hm-cone" cx="167" cy="138" r="13"/>
                 <rect class="dv-body" x="200" y="120" width="90" height="40" rx="5"/><text class="hm-amp" x="245" y="144" text-anchor="middle">AMP</text><path class="pc-cable" d="M122 120 C 135 125, 140 130, 150 128"/></g>
-              <g id="srcs">${SRC.map(([k, n], i) => `<g class="hm-src" data-k="${k}" transform="translate(${330 + (i % 2) * 95} ${18 + Math.floor(i / 2) * 50})"><rect x="0" y="0" width="88" height="38" rx="8"/><text x="44" y="24" text-anchor="middle">${n}</text></g>`).join('')}</g>
+              <g id="srcs">${SRC.map(([k, n], i) => `<g class="hm-src" data-k="${k}" transform="translate(${318 + (i % 2) * 102} ${18 + Math.floor(i / 2) * 50})"><rect x="0" y="0" width="98" height="38" rx="8"/><text x="49" y="24" text-anchor="middle">${n}</text></g>`).join('')}</g>
               <path class="hm-link" id="link" d=""/><text class="hm-lt" id="lt" x="245" y="180" text-anchor="middle"></text>
               <g id="notes"></g>
             </svg>
@@ -145,7 +145,7 @@ FD.add({
     async function play(k) {
       if (!ext()) setExt(true);
       const id = ++sndId, i = SRC.findIndex((s) => s[0] === k), [, n, via] = SRC[i];
-      const x = 330 + (i % 2) * 95, y = 18 + Math.floor(i / 2) * 50 + 19;
+      const x = 318 + (i % 2) * 102, y = 18 + Math.floor(i / 2) * 50 + 19;
       root.querySelectorAll('.hm-src').forEach((g) => g.classList.toggle('on', g.dataset.k === k));
       $('#link').setAttribute('d', `M${x} ${y} C ${x - 40} ${y}, 310 140, 290 140`);
       $('#link').classList.toggle('wl', !/cable|built-in/.test(via));

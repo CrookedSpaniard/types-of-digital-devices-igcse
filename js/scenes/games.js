@@ -53,7 +53,7 @@ FD.add({
                   <g class="gm-body"><circle cx="0" cy="62" r="16"/>${id === 'pl' ? '<rect class="gm-hs" id="hs" x="-14" y="54" width="28" height="12" rx="4"/>' : ''}
                   <path class="gm-limb" d="M0 78v62M0 140l-22 50M0 140l22 50"/>
                   <path class="gm-limb arm" data-a="l" d="M0 92l-34 26"/><path class="gm-limb arm" data-a="r" d="M0 92l34 26"/></g></g>`).join('')}
-              <path class="gm-beam" d="M160 60 C 220 40, 300 40, 360 60"/><rect class="gm-sl" x="222" y="26" width="76" height="16" rx="8"/><text class="gm-st" x="260" y="38">motion sensors</text>
+              <path class="gm-beam" d="M160 60 C 220 40, 300 40, 360 60"/><rect class="gm-sl" x="214" y="26" width="92" height="16" rx="8"/><text class="gm-st" x="260" y="38">motion sensors</text>
             </svg>
           </div>
           <div class="ctrls">

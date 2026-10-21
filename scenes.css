@@ -1,3 +1,5 @@
+/* The stage is a size container so scene layouts follow its width, not the window. */
+.stage { container: stage / inline-size; }
 /* ======================================================================
    Types of digital devices: styles for the scene simulations
    ====================================================================== */
@@ -34,6 +36,7 @@
 .ty-card dt { font-weight: 700; color: var(--muted); }
 .ty-card dd { margin: 0; }
 @media (max-width: 640px) { .ty-row { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@container stage (max-width: 40rem) { .ty-row { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .ty-rack { fill: var(--dev); }
 .ty-blink { fill: #51cf66; animation: tyBlink 1.4s infinite; }
 @keyframes tyBlink { 50% { fill: #2b8a3e; opacity: .4; } }
@@ -87,7 +90,7 @@
 .pc-two { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
 .pc-unit { display: grid; justify-items: center; gap: .3rem; transition: transform 1.2s ease-in-out, opacity .4s; }
 .pc-unit svg { max-width: 15rem; }
-.pc-unit.move { transform: translateX(8%) rotate(-2deg); }
+.pc-unit.move { transform: translate(-6px, -8px) rotate(-2deg); }
 .pc-unit.dead svg { filter: grayscale(1); opacity: .45; }
 .pc-off { font-size: 14px; font-weight: 800; fill: var(--bad); opacity: 0; }
 .pc-unit.dead .pc-off { opacity: 1; }
@@ -260,7 +263,7 @@
 .hm-cone { fill: #495057; stroke: #adb5bd; stroke-width: 2; }
 .hm-amp { fill: #8ce99a; font-size: 12px; font-weight: 800; font-family: ui-monospace, Menlo, monospace; }
 .hm-src rect { fill: var(--surface); stroke: var(--line); stroke-width: 2; transition: stroke .3s, fill .3s; }
-.hm-src text { font-size: 11px; font-weight: 700; fill: var(--ink); }
+.hm-src text { font-size: 10.5px; font-weight: 700; fill: var(--ink); }
 .hm-src { cursor: pointer; }
 .hm-src:hover rect { stroke: var(--scene); }
 .hm-src.on rect { stroke: var(--scene); fill: color-mix(in srgb, var(--scene) 14%, var(--surface)); stroke-width: 3; }
